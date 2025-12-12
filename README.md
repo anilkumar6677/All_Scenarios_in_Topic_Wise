@@ -1,5 +1,137 @@
 # All_Scenarios_in_Topic_Wise
 
+⚡ Simple Transformation Scenarios
+
+🔹 Scenario 1 — Select Specific Columns
+
+Input DataFrame
+```
++--------+--------+--------+--------+
+| emp_id | name   | dept   | salary |
++--------+--------+--------+--------+
+| 1      | Amit   | IT     | 70000  |
+| 2      | Riya   | HR     | 90000  |
+| 3      | Karan  | IT     | 65000  |
++--------+--------+--------+--------+
+```
+Transformation
+
+Select only name and salary.
+
+Output
+```
++--------+--------+
+| name   | salary |
++--------+--------+
+| Amit   | 70000  |
+| Riya   | 90000  |
+| Karan  | 65000  |
++--------+--------+
+```
+🔹 Scenario 2 — Filter Rows
+
+Input DataFrame
+```
++--------+--------+--------+--------+
+| emp_id | name   | dept   | salary |
++--------+--------+--------+--------+
+| 1      | Amit   | IT     | 70000  |
+| 2      | Riya   | HR     | 90000  |
+| 3      | Karan  | IT     | 65000  |
++--------+--------+--------+--------+
+```
+Transformation
+
+Filter employees with salary > 70000.
+
+Output
+```
++--------+--------+--------+--------+
+| emp_id | name   | dept   | salary |
++--------+--------+--------+--------+
+| 2      | Riya   | HR     | 90000  |
++--------+--------+--------+--------+
+```
+🔹 Scenario 3 — Add New Column
+
+Input DataFrame
+```
++--------+--------+--------+
+| emp_id | name   | salary |
++--------+--------+--------+
+| 1      | Amit   | 70000  |
+| 2      | Riya   | 90000  |
+| 3      | Karan  | 65000  |
++--------+--------+--------+
+```
+Transformation
+
+Add a new column bonus = salary * 0.1.
+
+Output
+```
++--------+--------+--------+-------+
+| emp_id | name   | salary | bonus |
++--------+--------+--------+-------+
+| 1      | Amit   | 70000  | 7000  |
+| 2      | Riya   | 90000  | 9000  |
+| 3      | Karan  | 65000  | 6500  |
++--------+--------+--------+-------+
+```
+🔹 Scenario 4 — Group By and Aggregate
+
+Input DataFrame
+```
++--------+--------+--------+
+| emp_id | dept   | salary |
++--------+--------+--------+
+| 1      | IT     | 70000  |
+| 2      | HR     | 90000  |
+| 3      | IT     | 65000  |
+| 4      | HR     | 85000  |
++--------+--------+--------+
+```
+Transformation
+
+Group by dept and compute total salary.
+
+Output
+```
++--------+------------+
+| dept   | total_salary|
++--------+------------+
+| IT     | 135000     |
+| HR     | 175000     |
++--------+------------+
+```
+🔹 Scenario 5 — Rename Column
+
+Input DataFrame
+```
++--------+--------+--------+
+| emp_id | name   | salary |
++--------+--------+--------+
+| 1      | Amit   | 70000  |
+| 2      | Riya   | 90000  |
++--------+--------+--------+
+```
+Transformation
+
+Rename salary → monthly_salary.
+
+Output
+```
++--------+--------+---------------+
+| emp_id | name   | monthly_salary|
++--------+--------+---------------+
+| 1      | Amit   | 70000         |
+| 2      | Riya   | 90000         |
++--------+--------+---------------+
+```
+
+
+
+
 🔥 Scenario 1 — Inner Join: Employees With Matching Departments
 
 📘 Description
